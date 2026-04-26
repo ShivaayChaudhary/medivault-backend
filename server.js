@@ -7,18 +7,7 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-//app.use(cors());
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
-
-dotenv.config();
-
-const app = express();
-
-// CORS — must be before everything else
+// CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://medivault-frontend-murex.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
